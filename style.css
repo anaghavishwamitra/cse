@@ -1,0 +1,213 @@
+/* ===== Global Styles ===== */
+@import url('https://fonts.googleapis.com/css2?family=Poppins:wght@400;600&display=swap');
+
+body {
+  font-family: 'Poppins', sans-serif;
+  background: linear-gradient(135deg, #e0f7fa, #fce4ec);
+  margin: 0;
+  padding: 0;
+  color: #333;
+  min-height: 100vh;
+}
+
+/* ===== Header ===== */
+header, h2 {
+  background: #4a90e2;
+  color: white;
+  padding: 20px 0;
+  margin: 0;
+  font-size: 28px;
+  font-weight: 600;
+  box-shadow: 0 2px 6px rgba(0,0,0,0.1);
+  letter-spacing: 1px;
+}
+
+/* ===== Form Styling ===== */
+form {
+  background: white;
+  max-width: 480px;
+  margin: 40px auto;
+  padding: 30px;
+  border-radius: 10px;
+  box-shadow: 0 4px 15px rgba(0,0,0,0.1);
+}
+
+form input, form button {
+  display: block;
+  width: 100%;
+  margin: 12px 0;
+  padding: 12px;
+  font-size: 16px;
+  border-radius: 6px;
+  border: 1px solid #ccc;
+  box-sizing: border-box;
+  transition: all 0.3s ease;
+}
+
+/* Input fields */
+form input:focus {
+  border-color: #4a90e2;
+  outline: none;
+  box-shadow: 0 0 5px rgba(74,144,226,0.5);
+}
+
+/* Button styling */
+form button {
+  background: #4a90e2;
+  color: white;
+  font-weight: 600;
+  border: none;
+  cursor: pointer;
+  transition: background 0.3s ease;
+}
+
+form button:hover {
+  background: #357ABD;
+}
+
+/* ===== Messages ===== */
+.success {
+  color: #2e7d32;
+  background: #c8e6c9;
+  padding: 12px;
+  border-radius: 6px;
+  max-width: 480px;
+  margin: 20px auto;
+}
+
+.error {
+  color: #c62828;
+  background: #ffcdd2;
+  padding: 12px;
+  border-radius: 6px;
+  max-width: 480px;
+  margin: 20px auto;
+}
+
+/* ===== Table Styling ===== */
+table {
+  border-collapse: collapse;
+  width: 90%;
+  margin: 30px auto;
+  background: white;
+  border-radius: 10px;
+  overflow: hidden;
+  box-shadow: 0 4px 10px rgba(0,0,0,0.1);
+}
+
+th, td {
+  text-align: left;
+  padding: 14px;
+}
+
+th {
+  background-color: #4a90e2;
+  color: white;
+  text-transform: uppercase;
+  letter-spacing: 0.5px;
+}
+
+tr:nth-child(even) {
+  background-color: #f2f2f2;
+}
+
+tr:hover {
+  background-color: #e1f5fe;
+  transition: background 0.3s ease;
+}
+
+/* ===== Footer ===== */
+footer {
+  background: #4a90e2;
+  color: white;
+  text-align: center;
+  padding: 10px;
+  margin-top: 40px;
+  font-size: 14px;
+  border-top: 4px solid #357ABD;
+}
+
+/* ===== Responsive Design ===== */
+@media (max-width: 600px) {
+  form, table {
+    width: 90%;
+  }
+
+  th, td {
+    font-size: 14px;
+    padding: 10px;
+  }
+
+  h2 {
+    font-size: 22px;
+  }
+}
+/* Secret Bottle */
+#secret-bottle {
+  position: fixed;
+  bottom: 20px;
+  right: 20px;
+  font-size: 40px;
+  cursor: pointer;
+  animation: float 3s ease-in-out infinite;
+  transition: transform .3s;
+}
+
+#secret-bottle:hover {
+  transform: scale(1.2);
+}
+
+@keyframes float {
+  0%, 100% { transform: translateY(0px); }
+  50% { transform: translateY(-6px); }
+}
+
+/* Hidden Chatbox */
+#chat-container {
+  width: 300px;
+  height: 400px;
+  background: #fff;
+  position: fixed;
+  bottom: 80px;
+  right: 25px;
+  display: none;
+  flex-direction: column;
+  border-radius: 12px;
+  box-shadow: 0 0 20px rgba(0,0,0,0.3);
+  overflow: hidden;
+}
+
+#chat-header {
+  background: #6a11cb;
+  color: white;
+  padding: 12px;
+  font-size: 18px;
+  text-align: center;
+}
+
+#chat-messages {
+  flex: 1;
+  padding: 10px;
+  overflow-y: auto;
+  font-size: 14px;
+}
+
+#chat-input-area {
+  display: flex;
+  border-top: 1px solid #ddd;
+}
+
+#chat-input {
+  flex: 1;
+  padding: 8px;
+  border: none;
+  outline: none;
+}
+
+#chat-send {
+  padding: 10px;
+  background: #2575fc;
+  border: none;
+  color: white;
+  cursor: pointer;
+}
